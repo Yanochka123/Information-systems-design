@@ -11,6 +11,7 @@ app.use(express.json());
 app.use('/api/devices', require('./routes/devices'));
 app.use('/api/vitals', require('./routes/vitals'));
 app.use('/api/recommendations', require('./routes/recommendations'));
+app.use('/api/profile', require('./routes/profile'));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', service: 'HealthNavigator API', version: '1.0.0' });

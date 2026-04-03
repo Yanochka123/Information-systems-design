@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard.jsx'
 import Devices from './pages/Devices.jsx'
 import Vitals from './pages/Vitals.jsx'
 import Recommendations from './pages/Recommendations.jsx'
+import Profile from './pages/Profile.jsx'
 import './App.css'
 
 export default function App() {
@@ -36,9 +37,15 @@ export default function App() {
               Recommendations
             </NavLink>
           </nav>
-          <div className="sidebar-footer">
-            <span className="status-dot"></span>
-            <span>System Online</span>
+          <div className="sidebar-bottom">
+            <NavLink to="/profile" className={({isActive}) => isActive ? 'nav-item active' : 'nav-item'}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              My Profile
+            </NavLink>
+            <div className="sidebar-footer">
+              <span className="status-dot"></span>
+              <span>System Online</span>
+            </div>
           </div>
         </aside>
         <main className="main-content">
@@ -47,6 +54,7 @@ export default function App() {
             <Route path="/devices" element={<Devices />} />
             <Route path="/vitals" element={<Vitals />} />
             <Route path="/recommendations" element={<Recommendations />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </main>
       </div>

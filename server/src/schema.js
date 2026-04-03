@@ -2,6 +2,23 @@ const pool = require('./db');
 
 async function initSchema() {
   await pool.query(`
+    CREATE TABLE IF NOT EXISTS user_profile (
+      id SERIAL PRIMARY KEY,
+      full_name VARCHAR(255) DEFAULT 'Health User',
+      email VARCHAR(255) DEFAULT 'user@healthnavigator.app',
+      date_of_birth DATE,
+      gender VARCHAR(50),
+      height_cm INTEGER,
+      weight_kg NUMERIC(5,1),
+      avatar_url TEXT,
+      goal_steps INTEGER DEFAULT 10000,
+      goal_sleep_hours NUMERIC(3,1) DEFAULT 8.0,
+      goal_heart_rate_max INTEGER DEFAULT 100,
+      bio TEXT,
+      created_at TIMESTAMPTZ DEFAULT NOW(),
+      updated_at TIMESTAMPTZ DEFAULT NOW()
+    );
+
     CREATE TABLE IF NOT EXISTS devices (
       id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
       name VARCHAR(255) NOT NULL,
