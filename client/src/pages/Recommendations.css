@@ -1,0 +1,139 @@
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--color-primary-dark); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.loading-text {
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--color-text-muted);
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  font-size: 14px;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.recs-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.rec-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.priority-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.priority-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.priority-count {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  padding: 1px 7px;
+  border-radius: 100px;
+}
+
+.rec-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.rec-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--rec-color);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.rec-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.rec-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.rec-icon { font-size: 16px; }
+
+.rec-category {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--rec-color);
+  flex: 1;
+}
+
+.rec-device {
+  font-size: 10px;
+  color: var(--color-text-faint);
+  background: var(--color-surface-2);
+  padding: 2px 7px;
+  border-radius: 100px;
+}
+
+.rec-message {
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.rec-time {
+  font-size: 11px;
+  color: var(--color-text-faint);
+}
